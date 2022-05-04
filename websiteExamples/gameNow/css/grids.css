@@ -1,0 +1,147 @@
+.grid-mainContent {
+  width: 80%;
+  padding-top: 3rem;
+  margin: auto;
+  padding-bottom: 10em;
+}
+
+.grid-adbanner {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  max-height: 10em;
+  overflow: hidden;
+  background-color: rgb(112, 0, 204);
+  align-content: center;
+}
+
+.grid-adbanner img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.grid-6of6 {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .grid-1of6 {
+    width: 33%;
+  }
+
+  .grid-1of6.current {
+    background-color: black;
+  }
+
+  .grid-6of6 .grid-1of6 {
+    margin-bottom: 0.2rem;
+  }
+
+  .grid-1of1 {
+    width: 100%;
+  }
+
+  .grid-1of1 .text-input {
+    width: 100%;
+  }
+
+  .grid-1of2 {
+    display: inline-block;
+    width: 49%;
+  }
+
+  .grid-1of3 {
+    width: 33%;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .grid-1of3-Account {
+    width: 33%;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  .grid-2of3-Account {
+    width: 66%;
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 40em) {
+    .grid-1of3-Account, .grid-2of3-Account {
+      width: 100%;
+    }
+  }
+
+  .grid-1of3-home {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+
+  }
+
+  .grid-2of3-home {
+    width:66%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 1.5rem;
+  }
+
+  @media (max-width: 45em) {
+    .grid-1of3-home {
+      width: 100%;
+      display: block;
+    }
+
+    .grid-2of3-home {
+      width: 100%;
+      display: block;
+      padding-left: 0;
+    }
+
+    .grid-1of2 {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 55em) {
+    .grid-mainContent {
+      padding: 1rem;
+      padding-bottom: 7em;
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 84.3em) {
+    .grid-1of6 {
+      width: 16.4%;
+    }
+  }
+  
+  @media (max-width: 75em) {
+    .grid-1of3 {
+      width: 49%;
+    }
+  }
+
+  @media (max-width: 60em) {
+    .grid-1of3 {
+      width: 100%;
+    }
+
+    .grid-1of6 {
+      width: 49%;
+    }
+  }
+
+
+  @media (max-width: 40em) {
+    .grid-1of6 {
+      width: 100%;
+    }
+  }

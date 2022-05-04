@@ -1,0 +1,239 @@
+/* This is some default styling for the exercise */
+.container .block {
+    height: auto; }
+    .container .block p {
+      padding: 0.5rem; } 
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.container {
+    display: -webkit-flex; 
+	display: -ms-flex; 
+    display: flex;
+
+    flex-direction: -webkit-row;
+    flex-direction: -ms-row;
+    flex-direction: row;
+
+    flex-wrap: -webkit-wrap;
+    flex-wrap: -ms-wrap;
+    flex-wrap: wrap;
+
+    justify-content: -webkit-flex-start;
+    justify-content: -ms-flex-start;
+    justify-content: flex-start;
+}
+
+.block {
+    padding: 1rem;
+}
+
+.containerCart {
+    display: -webkit-flex; 
+	display: -ms-flex; 
+    display: flex;
+    
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+    -webkit-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+    justify-content: flex-start;
+
+    align-content: flex-start;
+}
+
+.containerPlayed {
+    display: -webkit-flex; 
+	display: -ms-flex; 
+    display: flex;
+
+    flex-direction: -webkit-row;
+    flex-direction: -ms-row;
+    flex-direction: row;
+
+    flex-wrap: -webkit-wrap;
+    flex-wrap: -ms-wrap;
+    flex-wrap: wrap;
+
+    justify-content: -webkit-flex-start;
+    justify-content: -ms-flex-start;
+    justify-content: flex-start;
+}
+
+.blockPlayed {
+    padding: 0;
+}
+
+.blockLastPlayed {
+    padding-right: 2rem;
+}
+
+.blockCheckout {
+    min-width: 20rem;
+    -webkit-flex: 1 1 15em;
+	-ms-flex: 1 1 15em;
+    flex: 1 1 15em;
+    padding: 0;
+    order: 2;
+}
+
+.blockCart {
+    order: 1;
+    padding: 0.5em;
+}
+
+.blockSubmit {
+    padding-top: 5em;
+    margin-left: 0;
+
+}
+
+.flex-detailedProductView {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+  
+.box-item-cover {
+    flex-basis: 18rem;
+}
+
+.box-item-cover img {
+    flex: 1;
+    width: 100%;
+    height: 22.4rem;
+}
+
+.box-item-trailer {
+    flex: 3;
+    flex-basis: 18rem;
+}
+
+.box-item-trailer iframe {
+    width: 100%;
+    height: 22.5rem;
+}
+
+
+
+.box-item-info {
+    padding: 1rem;
+    border: 1px;
+    border-style: solid;
+    border-color:  rgb(112, 0, 204);
+    justify-content: center;
+    flex: 1;
+}
+
+@media (min-width: 30em) {
+    .block5 {
+        -webkit-order: 1;
+		-ms-order: 1;
+		order: 1;
+    }
+
+    blockCart {
+        order: 2;
+    }
+
+    .blockCheckout {
+        order: 1;
+    }
+}
+
+
+.containerCartAlt {
+    display: -webkit-flex; 
+	display: -ms-flex; 
+    display: flex;
+    
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+    -webkit-justify-content: flex-start;
+	-ms-justify-content: flex-start;
+    justify-content: flex-start;
+
+    align-content: flex-start;
+}
+
+.blockCart {
+    padding: 1rem;
+    flex: 1;
+}
+
+
+.containerCart img {
+    height: auto;
+}
+
+.containerCartAlt img {
+    width: 100%;
+    height: auto;
+}
+
+.blockProductList {
+    padding: 1rem;
+}
+
+.container .blockProductList {
+    height: auto; 
+}
+
+.container .blockProductList p {
+    padding: 0.5rem;
+} 
+
+div.accounts-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 3rem;
+}
+
+div.accounts-col {
+}
+
+div.accounts-col-username {
+    min-width: 20em;
+    flex: 3;
+    padding-left: 2rem;
+}
+
+div.accounts-col-payment {
+    min-width: 22em;
+    flex: 1;
+    padding-right: 2em;
+}
+
+div.accounts-col-billing {
+    min-width: 20em;
+    flex: 1;
+}
+
+div.accounts-col h2, div.accounts-col-username h2, div.accounts-col-payment h2, div.accounts-col-billing h2 {
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 30.95em) {
+    div.accounts-col {
+        flex: 1;
+    }
+    div.accounts-col-username {
+        padding-left: 0;
+        padding-top: 1rem;
+    }
+}
+
+@media (max-width: 43em) {
+    div.accounts-col-payment, div.accounts-col-billing {
+        padding: 0;
+        padding-bottom: 3rem;
+    }
+}

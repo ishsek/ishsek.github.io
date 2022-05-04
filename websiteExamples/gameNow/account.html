@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Account</title>
+
+    <link href="css/ourstyle.css" rel="stylesheet">
+    <link href="css/grids.css" rel="stylesheet">
+    <link href="css/borders.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto" rel="stylesheet">
+  </head>
+  
+    <body>
+      <div class="forFooter">
+        <div class="pageTitleBackdrop">
+          <header>
+            <nav id="mainNav">
+              <div class="navContent">
+                <a class="leftElements" href="index.html">GameNow</a>
+                <div class="rightElements">
+                <a href="productListing.html">Games</a>
+                <a href="updates.html">Updates</a>
+                <a  href="aboutUs.html">About</a>
+                <a  href="help.html">Help</a>
+                <a href="account.html">Account</a>
+                <a  href="cart.html">Cart</a>
+                <a class="icon" href="javascript:void(0);" onclick="myFunction()"><img src="img/menuIcon.png" alt="menu icon"></a>
+                </div> 
+              </div>
+            </nav>
+          </header>
+          <h1>Account</h1>
+        </div>
+
+      <main>
+        <div class="grid-mainContent">
+        
+          <section id="accountInfo">
+            <div class="accounts-row">
+            
+              <div class="accounts-col-billing">
+                <form>
+                  <h2>Username</h2>
+                  <div class="grid-1of1">
+                    <label for="newEmail">E-mail</label>
+                    <input class="accountInfo" type="text" id="newEmail" placeholder="bla@email.com">
+                  </div>
+                  <div class="grid-1of1">
+                      <label for="newPassword">Password</label>
+                      <input class="accountInfo" type="text" id="newPassword" placeholder="password">
+                    </div>
+                  <label for="submit-contact" class="hidden-label">Submit Contact Button</label>
+                  <button name="submitContact" id="submit-contact" class="button-reset">Submit Changes</button>
+                </form>
+              </div>
+            </div>
+
+            <div class="accounts-row">
+                <div class="accounts-col-payment">
+                  <h2>Payment Info</h2>
+                  <form>
+                    <div class="grid-1of1">
+                      <label for="newCardNumber">Card Number</label>
+                      <input class="accountInfo" type="text" id="newCardNumber" placeholder="1231 3123 1231">
+                    </div>
+                    <div class="grid-1of1">
+                      <label for="newExpDate">Expiration Date</label>
+                      <input class="accountInfo" type="text" id="newExpDate" placeholder="05/18">
+                    </div>
+                    <label for="submit-paymentInfo" class="hidden-label">Submit Payment Info Button</label>
+                    <button name="submitPaymentInfo" id="submit-paymentInfo" class="button-reset">Submit Payment Changes</button>
+                  </form>
+                </div>
+                <div class="accounts-col-billing">
+                  <h2>Billing Info</h2>
+                  <form>
+                    <div class="grid-1of1">
+                      <label for="newAddress">Address</label>
+                      <input class="accountInfo" type="text" id="newAddress" placeholder="12312 23Str 3Ave">
+                    </div>
+                    <label for="submit-billing" class="hidden-label">Submit Billing Info</label>
+                    <button name="submitBilling" id="submit-billing" class="button-reset">Submit Billing Changes</button>
+                  </form>
+                </div>
+            </div>
+          </section>
+
+          <section id="yourReviews">
+            <div class="grid-1of1">
+              <h2>Reviews</h2>
+              <h3>God of War</h3>
+              <p>A new bar for action adventure games, with some RPG mechanics that let you play the way you want.</p>
+              <h3>Horizon Zero Dawn</h3>
+              <p>A fun open world story game with an amazing visual style.</p>
+            </div>
+          </section>
+
+          <section id="yourPurchaseHistory">
+            <div class="grid-1of1">
+              <h2>Purchase History</h2>
+              <div class="purchaseList">
+                <div class="containerCart">
+                  <div class="blockCart">
+                    <h3>God of War</h3>
+                    <p>Date: 01/01/18</p>
+                    <p>Price: $100</p>
+                  </div>
+                  <div class="blockCart">
+                    <img class="productList" src="img/godofwar_cover.jpg" alt="god of war cover">
+                  </div>
+                </div>
+                <div class="containerCart">
+                  <div class="blockCart">
+                    <h3>Horizon Zero Dawn</h3>
+                    <p>Date: 01/02/18</p>
+                    <p>Price: $100</p>
+                  </div>
+                  <div class="blockCart">
+                    <img class="productList" src="img/horizon_cover.jpg" alt="horizon zero dawn cover">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer>
+          <p>Created by: Ishpreet Sekhon and Bhavin Solanki</p>
+      </footer>
+      
+    </div>
+    <script src="js/myScript.js"></script>
+    </body>
+</html>

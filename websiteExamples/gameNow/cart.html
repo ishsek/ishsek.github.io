@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cart</title>
+
+    <link href="css/ourstyle.css" rel="stylesheet">
+    <link href="css/grids.css" rel="stylesheet">
+    <link href="css/borders.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto" rel="stylesheet">
+  </head>
+
+  <body>
+      <div class="forFooter">
+          <div class="pageTitleBackdrop">
+    <header>
+        <nav id="mainNav">
+            <div class="navContent">
+              <a class="leftElements" href="index.html">GameNow</a>
+              <div class="rightElements">
+              <a href="productListing.html">Games</a>
+              <a href="updates.html">Updates</a>
+              <a  href="aboutUs.html">About</a>
+              <a  href="help.html">Help</a>
+              <a href="account.html">Account</a>
+              <a  href="cart.html">Cart</a>
+              <a class="icon" href="javascript:void(0);" onclick="myFunction()"><img src="img/menuIcon.png" alt="menu icon"></a>
+              </div> 
+            </div>
+          </nav>
+    </header>
+    <h1>Cart</h1>
+      </div>
+
+    <div class="grid-mainContent">
+      <div class="containerCart">
+        <div class="block">
+            <label for="check-box1" class="checkmarkContainer">Confirm
+                <input type="checkbox" checked="checked" name="checkbox1" id="check-box1">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="block">
+          <img src="img/spiderman_cover.jpg" alt="spiderman cover">
+        </div>
+        <div class="block">
+          <p>Spider-Man</p>
+          <p><a class="intext-link" href="#">remove</a></p>
+        </div>
+        <div class="block">
+          <p>$75</p>
+        </div>
+      </div>
+      <div class="containerCartAlt">
+        <div class="block">
+          <label for="check-box2" class="checkmarkContainer">Confirm
+              <input type="checkbox" checked="checked" name="checkbox2" id="check-box2">
+              <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="block">
+          <img src="img/fortnite_cover.jpg" alt="fortnite cover">
+        </div>
+        <div class="block">
+          <p>Fortnite</p>
+          <p><a class="intext-link" href="#">remove</a></p>
+        </div>
+        <div class="block">
+          <p>FREE</p>
+        </div>
+      </div>
+      <div class="containerCart">
+        <div class="block">
+            <label for="check-box3" class="checkmarkContainer">Confirm
+                <input type="checkbox" checked="checked" name="checkbox3" id="check-box3">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="block">
+          <img src="img/assassinscreedodyssey_cover.jpg" alt="assassin's creed odyssey cover">
+        </div>
+        <div class="block">
+          <p>Assassin's Creed Odyssey</p>
+          <p><a class="intext-link" href="#">remove</a></p>
+        </div>
+        <div class="block">
+          <p>$55</p>
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="block">
+          <p>Total</p>
+        </div>
+        <div class="block">
+            <p>$130</p>
+          </div>
+      </div>
+      
+      <form action="checkout.html">
+        <button class="button-reset" id="checkout" >Proceed to Checkout</button>
+      </form>
+
+    </div>
+
+    <footer>
+        <p>Created by: Ishpreet Sekhon and Bhavin Solanki</p>
+      </footer>
+    
+      </div>
+      <script src="js/myScript.js"></script>
+  </body>
+</html>

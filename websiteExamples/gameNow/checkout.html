@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkout</title>
+
+    <link href="css/ourstyle.css" rel="stylesheet">
+    <link href="css/grids.css" rel="stylesheet">
+    <link href="css/borders.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto" rel="stylesheet">
+  </head>
+  
+  <body>
+    <div class="forFooter">
+            <div class="pageTitleBackdrop">
+        <header>
+                <nav id="mainNav">
+                        <div class="navContent">
+                          <a class="leftElements" href="index.html">GameNow</a>
+                          <div class="rightElements">
+                          <a href="productListing.html">Games</a>
+                          <a href="updates.html">Updates</a>
+                          <a  href="aboutUs.html">About</a>
+                          <a  href="help.html">Help</a>
+                          <a href="account.html">Account</a>
+                          <a  href="cart.html">Cart</a>
+                          <a class="icon" href="javascript:void(0);" onclick="myFunction()"><img src="img/menuIcon.png" alt="menu icon"></a>
+                          </div> 
+                        </div>
+                      </nav>
+        </header>
+        <h1>Checkout</h1>
+      </div>
+
+        <div class="grid-mainContent">
+            <div class="container">
+
+                <div class="blockCheckout">
+                    <form class="payment">
+                        <div class = "formInput">
+                            <h2>Personal Information:</h2>
+                                <label for="form-firstnamefield">First Name: </label>
+                                <input class="text-input" type="text" id="form-firstnamefield" placeholder="Jane">
+                                <label for="form-lastnamefield">Last Name: </label>
+                                <input  class="text-input" type="text" id="form-lastnamefield" placeholder="Doe">
+                        
+                                <label for="form-email">Email: </label>
+                                <input  class="text-input" type="text" id="form-email" placeholder="youremail@gmail.com">
+                        </div>
+                    
+
+                        <div class = "formInput">
+                            <h2>Ship To:</h2>
+                                <label for="form-address">Address: </label>
+                                <input  class="text-input" type="text" id="form-address" placeholder="1234 Name Street">
+                                <label for="form-cityfield">City: </label>
+                                <input  class="text-input" type="text" id="form-cityfield" placeholder="Vancouver">
+                                <label for="form-provincefield">Province: </label>
+                                <input  class="text-input" type="text" id="form-provincefield" placeholder="BC">
+                                <label for="form-postalfield">Postal Code: </label>
+                                <input  class="text-input" type="text" id="form-postalfield" placeholder="V5A 1S6">
+                        </div>
+
+                        <div class = "formInput">
+                            <h2>Payment:</h2>
+                                <label for="form-cardfield">Credit Card Number: </label>
+                                <input  class="text-input" type="text" id="form-cardfield" placeholder="1234 5678 9101 1213">
+                                <label for="form-expirationfield">Expiration Date: </label>
+                                <input  class="text-input" type="text" id="form-expirationfield" placeholder="MM/YY">
+                                <label for="form-securityfield">Security Code: </label>
+                                <input  class="text-input" type="text" id="form-securityfield" placeholder="CVC">
+                        </div> 
+                    </form>
+
+                    <div class = "blockSubmit">
+                        <form action="orderComplete.html">
+                            <button class="button-reset" id="orderComplete">Submit Order</button>
+                        </form>
+                    </div>
+                </div>    
+
+                <div class="blockCart">
+                        <h2>Cart</h2>
+                        <!-- In-text link code is from http://www.echoecho.com/htmltext03.htm -->
+                        <ol>
+                            <li><a class="intext-link" href="#">COD Black Ops 4</a> $75</li>
+                            <li><a class="intext-link" href="#">Fortnite</a> $0</li>
+                            <li><a class="intext-link" href="#">AC Odyssey</a> $55</li>
+                        </ol>
+                        <p>Total: $130</p>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+                <p>Created by: Ishpreet Sekhon and Bhavin Solanki</p>
+        </footer>
+    </div>
+    <script src="js/myScript.js"></script>
+    </body>
+</html>

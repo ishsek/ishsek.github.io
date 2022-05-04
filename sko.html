@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ishpreet Sekhon Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="main">
+            <a href="portfolio.html">Home</a>
+            <div class="navRight">
+                <!-- <a href="contact.html">Contact</a> -->
+                <a href="pdf/Resume.pdf">Resum&eacute;</a>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <img class="banner" src="img/skoThumb2.png" alt="sko art">
+    </div>
+    <main>
+        <h1 class="project">sko</h1>
+        <h2>Background</h2>
+        <section>
+            <h3>Website Description</h3>
+            <p class="bodyText">
+                sko is a website made by a group of two students for a third year university course on backend web development over the duration of 3 weeks. The website is programmed in HTML, CSS, JavaScript and PHP with an SQL relational database. 
+            </p>
+            <div class="roles">
+                <p class="bodyText"><strong>Type:</strong> Web Design and Development</p>
+                <p class="bodyText"><strong>Tools:</strong> PHP, SQL, JavaScript, AJAX, jQuery, phpMyAdmin, HTML, CSS</p>
+                <p class="bodyText"><strong>Goal:</strong> Create a website with a database</p>
+            </div>
+        </section>
+
+        <h2>The Process</h2>
+
+        <section>
+            <h3>ER Diagram</h3>
+            <p class="bodyText"> 
+                For the first step of this project I created an entity relationship diagram to model how the database would work. The model is used as a reference for the code that creates the database and was made using draw.io.
+            </p>
+            <figure>
+                <img src="img/skoER.png" alt="entity relationship diagram of database">
+                <figcaption>Entity relationship model and schema</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h3>Database</h3>
+            <p class="bodyText">
+                The database itself was made using PHP code to setup the structure and create the SQL file. We then populated the database with a few entries. I then imported the database into phpMyAdmin to manage it and test queries before coding them in PHP.
+            </p>
+            <figure>
+                <img src="img/skoDatabaseDesign.JPG" alt="entity relationship diagram of database">
+                <figcaption>Database created and viewed in phpMyAdmin</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h3>Queries</h3>
+            <p class="bodyText">
+                I created a connection file in php that is embedded into any pages that need access to the database. I then tested the SQL queries I needed in phpMyAdmin, and then setup the php code to execute and store the results of the query. In this example from the home page of the website, I access the database and store a reference to it, then setup a query and execute it on the reference, finally accessing the results row by row with the database column keys.
+            </p>
+            <figure>
+                <img src="img/skoDatabaseOpenConnect.png" alt="database connection">
+                <figcaption>dbconnect.php file that is integrated into each page</figcaption>
+            </figure>
+            <figure>
+                <img src="img/skoDatabaseQueryEx1.png" alt="Query example">
+                <figcaption>Example query for first 3 entries in spring collection</figcaption>
+            </figure>
+            <figure>
+                <img src="img/skoDatabaseUsage1.png" alt="Display results">
+                <figcaption>Dispalying query results with HTML and CSS</figcaption>
+            </figure>
+            <figure>
+                <img src="img/skoDatabaseUsage2.png" alt="Example of database access">
+                <figcaption>Resulting webpage snippet from query</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Account</h3>
+            <p class="bodyText">
+                All pages that require login or account creation are accessed via the SSL protocol to ensure encryption of the webpage. When users create their accounts it is first validated for correctness. This is to avoid SQL injection attacks using forms. The password is then hashed so that it isn't stored in it's raw format in the database and the data is stored sent to the database via an INSERT query. Once the user logs in their info is stored using SESSIONS until the session ends or they logout. This lets them explore the website and see personalized information, like their cart and settings, without logging in every time.
+            </p>
+            <figure>
+                <img src="img/skoRequireSSL.png" alt="Account login pages require SSL">
+                <figcaption>Pages with sensitive data are accessed via the SSL protocol</figcaption>
+            </figure>
+            <figure>
+                <img src="img/skoAccountValidation.png" alt="Account input validation">
+                <figcaption>Form input validation before database entry</figcaption>
+            </figure>
+            <figure>
+                <img src="img/skoAccountInsert.png" alt="Account input insertion">
+                <figcaption>Data is stored using an INSERT query with a hashed password</figcaption>
+            </figure>
+            <figure>
+                <img src="img/skoSession.png" alt="Username email via session">
+                <figcaption>Email is used as login name and stored in SESSION</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>JavaScript</h3>
+            <p class="bodyText">
+                The website uses AJAX techniques with JavaScript and jQuery to dynamically load more reviews when a user clicks "load more". JavaScript is also used for the banner on the home page to rotate out the image. 
+            </p>
+            <figure>
+                <img src="img/skoAJAX.png" alt="AJAX demo">
+                <figcaption>Asynchronous JavaScript code for review list</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Prototype</h3>
+            <p class="bodyText">
+                Click through to take a look at the prototype!
+            </p>
+            <figure>
+                <img class="mySlides" src="img/skoPrototype1.png" alt="prototype 1">
+                <img class="mySlides" src="img/skoPrototype2.png" alt="prototype 2">
+                <img class="mySlides" src="img/skoPrototype3.png" alt="prototype 3">
+                <img class="mySlides" src="img/skoPrototype4.png" alt="prototype 4">
+                <img class="mySlides" src="img/skoPrototype5.png" alt="prototype 5">
+                <img class="mySlides" src="img/skoPrototype6.png" alt="prototype 6">
+                <img class="mySlides" src="img/skoPrototype7.png" alt="prototype 7">
+                <figcaption>
+                    <button class="w3-button myButton" onclick="plusDivs(-1)">&#10094;</button>
+                    <button class="w3-button myButton" onclick="plusDivs(+1)">&#10095;</button>
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Reflection</h3>
+            <p class="bodyText">This project was very enlightening for backend web development. I learned many new tools that are very useful for creating dynamic webpages. AJAX and jQuery are two that I continue to use regularly, as they are very good for requesting and interpreting JSON data from web API's. PHP is also an amazing asset to any web developer, and I use it whenever I'm dealing with forms or I want to create a partial HTML document that gets reused often like headers and footers.
+            </p>
+        </section>
+        
+        <section>
+            <p class="floatLeft bodyText"><a class="inText" href="gamenow.html">Previous Project</a></p>
+            <p class="floatRight bodyText"><a class="inText" href="portfolio.html">Return to Home</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p class="contact">&copy Created by Ishpreet Sekhon</p>
+        <p class="contact"><a class="inText" href="mailto:issekhon.117@gmail.com">issekhon.117@gmail.com</a></p>
+    </footer>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+        showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1} 
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none"; 
+        }
+        x[slideIndex-1].style.display = "block"; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Updates</title>
+
+    <link href="css/ourstyle.css" rel="stylesheet">
+    <link href="css/grids.css" rel="stylesheet">
+    <link href="css/borders.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto" rel="stylesheet">
+  </head>
+  
+  <body>
+  <div class="forFooter">
+      <div class="pageTitleBackdrop">
+      <header>
+          <nav id="mainNav">
+              <div class="navContent">
+                <a class="leftElements" href="index.html">GameNow</a>
+                <div class="rightElements">
+                <a href="productListing.html">Games</a>
+                <a href="updates.html">Updates</a>
+                <a  href="aboutUs.html">About</a>
+                <a  href="help.html">Help</a>
+                <a href="account.html">Account</a>
+                <a  href="cart.html">Cart</a>
+                <a class="icon" href="javascript:void(0);" onclick="myFunction()"><img src="img/menuIcon.png" alt="menu icon"></a>
+                </div> 
+              </div>
+            </nav>
+      </header>
+      <h1>Updates</h1>
+      </div>
+      <div class="grid-mainContent">
+
+        <button class="collapsible">1.4 Patch Notes</button>
+          <div class="content">
+            <p>Improved the responsiveness of the company website for easier usage on different devices, such as mobile phones and gaming consoles.</p>
+          </div>
+
+        <button class="collapsible">1.3 Patch Notes</button>
+          <div class="content">
+            <p>Added a "Recommended Games" section to the Home and Product Listing page. Games will be recommonded to users based on the users' prior purchases and search terms.</p>
+          </div>
+
+        <button class="collapsible">1.2 Patch Notes</button>
+        <div class="content">
+          <p>Fixed issue where items from the cart were removed automatically after adding four. Now there is no limit to how many games are simultaneously allowed in the cart.</p>
+        </div>
+
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
+          
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+        </script>
+      </div>
+      <footer>
+          <p>Created by: Ishpreet Sekhon and Bhavin Solanki</p>
+      </footer>
+    </div>
+    <script src="js/myScript.js"></script>
+  </body>
+
+</html>

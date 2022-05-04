@@ -1,0 +1,514 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* To center elements */
+div.center {
+    text-align: center;
+}
+
+/* Custom font from: https://www.dafont.com/louis-george-caf.font */
+@font-face {
+    font-family: Louis;
+    src: url(LouisGeorgeCafe.ttf);
+}
+
+html {
+    font-family: Louis;
+}
+
+/* Main navigation bar and nav links styling */
+nav.demo {
+    position: relative;
+    margin: 0;
+    display: block;
+    background-color: rgb(255, 255, 255, 0.7);
+}
+
+nav.demo a {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    color: black;
+    transition: color 0.25s;
+    -webkit-transition: background-color 0.25s; /* Safari */
+    transition: background-color 0.25s;
+}
+
+nav.demo a:hover, nav.demo a:focus {
+    background-color: rgb(246, 247, 235);
+    color: rgb(57, 62, 65);
+    border: dotted;
+    padding: 0.8rem;
+}
+
+nav.main {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    margin: 0;
+    background-color: rgba(247, 247, 247, 1);
+    /* background-image: linear-gradient(to bottom right, rgb(22, 22, 22), rgb(0, 0, 0)); */
+    /* border-bottom: solid black; */
+    /* box-shadow: 10px 0 10px 0; */
+    /* background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.1)); */
+}
+
+nav.main a {
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: none;
+    transition: color 0.25s;
+    -webkit-transition: color 0.25s; /* Safari */
+    transition: color 0.25s;
+}
+
+nav.main a:hover, nav.main a:focus {
+    /* background-color: rgb(255, 255, 255); */
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    /* padding: 0.8rem; */
+}
+
+nav.main a.external {
+    color: black;
+}
+
+nav.main a.external:hover, nav.main a.external:focus {
+    background-color: rgb(255, 224, 139);
+}
+
+nav.main a.external:hover, nav.main a.external:focus {
+    color: rgb(57, 62, 65);
+}
+
+div.navRight {
+    float: right;
+}
+
+/* Content container style */
+main {
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (min-width: 100em) {
+    main {
+        width: 45%;
+    }
+}
+
+@media (max-width: 40em) {
+    main {
+        width: 93%;
+    }
+}
+
+/* Headings */
+h1 {
+    color: rgb(76, 82, 163);
+    margin: 0.5em 0 0 0;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+h1.project {
+    margin: 1em 0 1em 0;
+}
+
+h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    color: rgb(76, 82, 163);
+}
+
+h2.splash {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    color: black;
+}
+
+h3 {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Section styling */
+section.content {
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+    background-color: rgb(243, 243, 243);
+}
+
+/* In text links */
+a.inText, a.inText:visited {
+    color: rgb(76, 82, 163);
+    transition: color 0.25s;
+}
+
+a.inText:hover, a.inText:focus {
+    color: rgb(150, 157, 255);
+}
+
+/* Styling of images */
+img {
+    width: 100%;
+}
+
+@media (min-width: 100em) {
+    img {
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+img.logo {
+    display: block;
+    width: 7rem;
+    height: auto;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6rem;
+}
+
+img.banner {
+    vertical-align: top;
+    max-height: 30rem;
+    object-fit: cover;
+}
+
+div.banner {
+    border-bottom: 0.5rem solid rgba(0, 0, 0, 0.1);
+}
+
+a.imageLink {
+    transition: opacity 0.25s;
+}
+
+a.imageLink:hover, a.imageLink:focus {
+    opacity: 0.5;
+}
+
+img.imageLink {
+    border: solid rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+
+div.gridImage1of2 {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+}
+
+div.gridImage2of2 {
+    font-size: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+div.gridImage1of3 {
+    display: inline-block;
+    width: 33%;
+}
+
+div.gridImage3of3 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+}
+
+@media (max-width: 70em) {
+    div.gridImage1of2 {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    div.gridImage1of3 {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Styling for paragraphs */
+p.bodyText {
+    margin: 0 0 1rem 0;
+    width: 100%;
+    line-height: 150%;
+}
+
+p.floatLeft {
+    display: block;
+    float: left;
+    width: auto;
+}
+
+p.floatRight {
+    display: block;
+    float: right;
+    width: auto;
+}
+
+/* @media (min-width: 60em) {
+    p.bodyText {
+        width: 80%;
+    }
+} */
+
+/* Figure styling */
+figure {
+    margin: 3rem 0; 
+}
+
+figcaption {
+    margin-top: 1rem;
+    text-align: center;
+    font-style: italic; 
+}
+
+figure.project {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+/* Footer style */
+footer {
+    width: 100%;
+    margin-top: 3rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p.contact {
+    font-size: 0.8rem;
+}
+
+
+/* Hover image animations */
+div.container {
+    position: relative;
+    transition: .5s ease;
+}
+
+div.container img {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    
+}
+
+div.container:hover div.zero, div.container:focus div.zero {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+div.container:hover img, div.container:focus img {
+    /* opacity: 0.3; */
+}
+  
+div.container:hover div.middle, div.container:focus div.middle {
+    /* padding: 1rem; */
+    opacity: 1;
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.4));
+    /* border: black dotted 0.2rem; */
+    /* background-color: rgba(255, 255, 255, 0.9); */
+}
+
+/* div.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+} */
+div.middle {
+    /* transition: .5s ease; */
+    opacity: 1;
+    background-color: rgba(255, 97, 97, 0.8);
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+div.zero {
+    background-color: rgba(131, 141, 114, 0.5);
+}
+
+div.ant {
+    /* background-color: rgb(77, 75, 158); */
+    background-color: rgba(77, 75, 158, 0.5)
+}
+
+div.gamenow {
+    background-color: rgba(67, 0, 100, 0.5);
+}
+
+div.sko {
+    background-color: rgba(114, 0, 0, 0.5)
+}
+
+div.ffth {
+    background-color: rgba(144, 78, 33, 0.5);
+}
+
+div.mend {
+    background-color: rgba(0, 46, 114, 0.3);
+}
+
+div.planetarycontrol {
+    background-color: rgba(10, 70, 121, 0.3)
+}
+
+p.overlay {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    padding: 0 2rem;;
+}
+
+p.overlayHeader {
+    color: white;
+    text-align: left;
+    font-size: 2rem;
+    padding: 0 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+/* Role styling */
+ul.roles {
+    margin-top: 2rem;
+    list-style: none;
+}
+
+ul.roles li {
+    margin-bottom: 0.5rem;
+}
+
+/* Spacing for game thumbnails */
+#thumb1 {
+    padding-right: 0.1rem;
+}
+
+#thumb2 {
+    padding-left: 0.1rem;
+}
+
+@media (max-width: 70em) {
+    #thumb1 {
+        padding-right: 0;
+    }
+    
+    #thumb2 {
+        padding-left: 0;
+    }
+}
+
+/* PDF styling */
+div.pdfHolder {
+    width: 100%;
+    height: 500px;
+}
+
+object.pdf {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 40em) {
+    div.pdfHolder {
+        height: 350px;
+    }
+}
+
+iframe.wireframe {
+    width: 100%;
+    align-content: middle;
+    height: 30em;
+}
+
+@media (max-width: 40em) {
+    iframe.wireframe {
+        height: 20em;
+    }
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+	background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+	background:rgb(76, 82, 163);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+	background-color:rgb(76, 82, 163);
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+}
+.myButton:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+	background:rgb(150, 157, 255);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+	background-color:rgb(150, 157, 255);
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* Video style */
+.iframe-container{
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+    margin: 30px 0px 30px 0px;
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

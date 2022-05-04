@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ishpreet Sekhon Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/js/pdfobject.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="main">
+            <a href="portfolio.html">Home</a>
+            <div class="navRight">
+                <!-- <a href="contact.html">Contact</a> -->
+                <a href="pdf/Resume.pdf">Resum&eacute;</a>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <img class="banner" src="img/antThumb.png" alt="ant commander ship box art">
+    </div>
+    <main>
+        <h1 class="project">Ant Commander</h1>
+        <iframe frameborder="0" src="https://itch.io/embed/447018?border_width=5&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=4C52A3&amp;border_color=363636" width="100%" height="175"></iframe>
+        <h2>Background</h2>
+        <section>
+            <h3>Game Description</h3>
+            <p class="bodyText">
+                Ant Commander is a prototype game made for a third year university course by four students over the duration of two weeks. The project is a reimagining of a 2D paltforming game called <a class="inText" href="https://www.youtube.com/watch?v=ov0fswkheBw">
+                Antlion</a>. The goal of the project was to redesign it using a mixture of "fun keys" to create a compelling experience for a 
+                particular type of player. 
+                Our team of four students created a challenging bullet hell game with energy managment mechanics from games like DarkSouls, and focused on
+                boss mechanic theming.
+            </p>
+            <div class="roles">
+                <p class="bodyText"><strong>Type:</strong> Game Design and Programming</p>
+                <p class="bodyText"><strong>Tools:</strong> Unity, Monodevelop, Illustrator</p>
+                <p class="bodyText"><strong>Goal:</strong> Modify an existing game to target a specific type of player</p>
+            </div>
+        </section>
+
+        <h2>The Process</h2>
+
+        <section>
+        <h3>Ideation</h3>
+        <p class="bodyText"> 
+            Ant commander's original idea was going to be a boss-rush style game where players go through a series of bosses one
+            after another, aquiring new items along the way to improve their abilities that would feed in to the way they 
+            take down the next one. The game was to be strategic and fast paced. Players would have to choose between firing or movement as 
+            both would drain their energy.
+        </p>
+        <figure>
+            <img src="img/antCommanderStoryboard.png" alt="structure of zero game plot">
+            <figcaption>Storyboard of gameplay loop for Ant Commander</figcaption>
+        </figure>
+        <figure>
+            <img src="img/antCommanderPrototype.png" alt="physical prototype">
+            <figcaption>Physical rapid prototype to test mechanics</figcaption>
+        </figure>
+        <p class="bodyText">
+            After creating a rapid physical prototype and playtesting the strategy elements of the game, we noticed the 
+            strategy element was not really working. The grid style was too restrictive to the player, not giving them enough
+            room or time to strategize. 
+            Some bosses would teleport when bullets were heading there way, but we didn't put enough limitations on the triggering based on
+            how slow players could fire at that point, so the boss would constantly teleport out of the way. Our solution was to expand the scale of
+            the game and make players faster and bosses would have phases where they could not be killed or would teleport 
+            a lot more.
+        </p>
+        <p class="bodyText"><a class="inText" href="pdf/GDD3.pdf" target="_blank">Ant Commander GDD</a> was the second version of our game design doc, after revisions we discussed from playtesting. </p>
+        </section>
+
+        <section>
+        <h3>Programming</h3>
+        <p class="bodyText">For this project, I did all of the scripting and implementation within Unity. The challenge here was that this was my first time working with Unity. I was unfamiliar with the editor and the design document that our team created had some complex mechanics in it, like compelx fire effects with their own colliders. To overcome this I did some research on of Unity on my own to learn how to create weapons and projectiles. Doing this i learned about a lot of the editor properties, as well as scripting in C# to allow for the complex results of collisions. This was all done within a week.</p>
+        
+        <h3>Challenges</h3>
+        <p class="bodyText">An example of a problem that I had to overcome was dealing with experimenation in attribute values. Though I had an idea of what values most of the attributes would have going into the digital prototoype (based on the physical prototype playtesting), there is always fine tuning that needs to be done on these values. Things like the player's movement speed, fire speed, energy, rate of fire, etc., need to be adjusted constantly and then tested to get right. </p>
+        <p class="bodyText">From my experience with Object Oriented Programming previously, I knew to make variables for each of these values and use those throughout the script, reducing copy pasting and making code dynamic. However, whenever a value needed to be adjusted I had to go into the script it is housed in, change the value, save the script and then test it. This became cumbersome when I started adding multiple scripts to objects.</p>
+        <figure>
+            <img src="img/antCommanderVariables.png" alt="C# variables">
+            <figcaption>Variables used for attributes in C# script</figcaption>
+        </figure>
+        <figure>
+            <img src="img/antCommanderCodingScripts.png" alt="Unity scripts">
+            <figcaption>Scripts for the project housing many different variables</figcaption>
+        </figure>
+        <p class="bodyText">Through looking up solutions online, I learned that Unity's editor supports public variables directly within the editor window. By making this change to variables that needed to be constantly edited, it made the testing process a lot faster, and resulted in combat that felt difficult but fair. This also allowed for linking of game objects to scripts very easily. While normally I would have to provide the exact name of the game object to link it to a script, using this method I could just drag and drop the game object from the scene hierarchy to the variable and it would be immediately linked.</p>
+        <figure>
+            <img src="img/antCommanderVariablesPublic.png" alt="C# public variables">
+            <figcaption>Variables made public within C# script</figcaption>
+        </figure>
+        <figure>
+            <img src="img/antCommanderVariablesEditor.png" alt="C# public variables in Unity">
+            <figcaption>Variables editable within Unity editor</figcaption>
+        </figure>
+        <p class="bodyText">Another problem that I encountered was with object consistency. Creating an object in Unity was fairly straightforward, but using it in another scene meant that I had to essentially recreate the object (objects in a scene are exclusive to that scene). This quickly became unsustainable when I began copying and pasting the x and y positions that the UI elements need to be in for every instance of the element in each scene. Looking at Unity's <a class="inText" href="https://docs.unity3d.com/Manual/Prefabs.html">excellent documentation</a> I found the Prefab system, where storing the active game object with all it's attached scripts and values into the file system would create a replicable object. With that, I was able to copy game objects, like UI elements or enemies, and then add them into different scenes (levels, in this case) with their attribute values already set.</p>
+        <figure>
+            <img src="img/antCommanderCodingPrefabs.png" alt="Prefabs in Unity editor">
+            <figcaption>Prefabs replicable to any level within Unity editor</figcaption>
+        </figure>
+        </section>
+
+        <section>
+        <h3>Reflection</h3>
+        <p class="bodyText">This project made me understand the benefits of using a game engine like Unity or Unreal. They are powerful tools that take care of a lot of the basic functionality for you, and provide a lot of functionality to make games faster and more reliably. I also learned how to adapt the concept for a digital game into a physical prototype, to allow for early testing of mechanics. This was reinforced for me as an invaluable tool in the prototyping process when we found real issues in the design of the game without ever having written a single line of code. Shortly after concluding this course, Ubisoft showed off their <a class="inText" href="https://switchingworlds.com/here-is-the-first-physical-prototype-used-for-mario-rabbids-kingdom-battle/">physical prototype</a> for the highly successful game Mario + Rabbids Kingdom Battle, highlighting the commercial viability for this tool.</p>
+        </section>
+
+        <section>
+            <p class="floatLeft bodyText"><a class="inText" href="project1.html">Previous Project</a></p>
+            <p class="floatRight bodyText"><a class="inText" href="ffth.html">Next project</a></p>
+        </section>
+    </main>
+
+
+    <footer>
+        <p class="contact">&copy Created by Ishpreet Sekhon</p>
+        <p class="contact"><a class="inText" href="mailto:issekhon.117@gmail.com">issekhon.117@gmail.com</a></p>
+    </footer>
+</body>
+</html>

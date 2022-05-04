@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GameNow Style Guide</title>
+
+    <link href="css/ourstyle.css" rel="stylesheet">
+    <link href="css/grids.css" rel="stylesheet">
+    <link href="css/borders.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans|Roboto" rel="stylesheet">
+ 
+  </head>
+
+  <body>
+
+    <header>
+
+      <h1 id="styleguide" class="styleguide">GameNow | Style Guide</h1>
+
+
+      <nav class="grid-6of6 styleguide">        
+        <a class="grid-1of6" href="styleGuide.html#interactive_elements">Interactive Elements</a>
+        <a class="grid-1of6" href="styleGuide.html#text_elements">Text Elements</a>
+        <a class="grid-1of6" href="styleGuide.html#combined_elements">Combined Elements</a>
+        <a class="grid-1of6" href="productListingTemplate.html">Product Listing Template</a>
+        <a class="grid-1of6" href="checkoutTemplate.html">Checkout Template</a>
+        <a class="grid-1of6" href="styleGuide.html#citations">Citations</a>
+      </nav>
+
+    </header>
+
+    <div class="grid-mainContent">
+
+      <!-- INTERACTIVE ELEMENTS SECTION // -->
+      <section id="interactive_elements">
+        
+        <h2>Interactive Elements</h2>
+        
+        <section class="element">
+          <h3>In-text link</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.intext-link</p>
+
+          <h4>Sample code</h4>
+          <code>&lt;a class="intext-link" href="#"&gt;in text link&lt;/a&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <a class="intext-link" href="#">in text link</a>
+        </section>
+
+
+        <!-- Default Button styling section -->
+        <section class="element">
+          <h3>Navigation Link</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.button-nav</p>
+
+          <h4>Sample code:</h4>
+          <code>&lt;a href="#" class="button-nav"&gt;Default Button&lt;/a&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <a class="button-nav" href="#">Default Button</a>
+        </section>
+
+
+        <section class="element">
+          <h3>Submit/Reset Buttons</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.button-reset</p>
+
+          <h4>Sample code</h4>
+          <code>&lt;button class="button-reset"&gt;my button&lt;/button&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <button class="button-reset" id="submittest">Submit</button>
+        </section>
+
+
+        <section class="element">
+          <h3>Text Input Field with Label</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.text-input</p>
+
+          <h4>Sample code</h4>
+          <code>&lt;label for="myinput"&gt;My Label&lt;/label&gt;
+            &lt;input class="text-input" id="myinput" type="text"&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <label for="myinput">My Label: </label>
+          <input class="text-input" id="myinput" type="text">
+        </section>
+
+
+        <section class="element">
+          <h3>Check Box with Label</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.checkmark</p>
+
+          <h4>Sample code</h4>
+          <code>&lt;label class="checkmarkContainer"&gt;CheckBox 1<br>
+              &lt;input type="checkbox" checked="checked"&gt;<br>
+              &lt;span class="checkmark"&gt; &lt;/span&gt;<br>
+          &lt;/label&gt;
+          </code>
+
+          <h4>Rendered element:</h4>
+
+          <label class="checkmarkContainer">Checkbox 1
+              <input type="checkbox" checked="checked">
+              <span class="checkmark"></span>
+          </label>
+
+        </section>
+
+        <section class="element">
+          <h3>Image as a Link</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.image-link</p>
+
+          <h4>Sample code</h4>
+          <code>
+            &lt;div class="image-link"&gt;<br>
+            &lt;a class="image-link" href="#"&gt;<br>
+            &lt;img src="img/godofwar_cover.jpg" alt="god of war image"&gt;<br>
+            &lt;/a&gt;<br>
+            &lt;/div&gt;
+          </code>
+
+          <h4>Rendered element:</h4>
+          <div class="image-link"> 
+            <a class="image-link" href="#">
+              <img src="img/godofwar_cover.jpg" alt="god of war image">
+            </a>
+          </div>
+        </section>
+
+      </section>
+      <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+      <!-- TEXT ELEMENTS SECTION // -->
+      <section id="text_elements">
+        <h2>Text Elements</h2>
+
+        <section class="element">
+          <h3>Headings</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.heading</p>
+
+          <h4>Sample code</h4>
+          <code>
+            &lt;h1 class="heading"&gt;Heading 1&lt;/h1&gt;<br>
+            &lt;h2 class="heading"&gt;Heading 2&lt;/h2&gt;<br>
+            &lt;h3 class="heading"&gt;Heading 3&lt;/h3&gt;<br>
+            &lt;h4 class="heading"&gt;Heading 4&lt;/h4&gt;<br>
+          </code>
+
+          <h4>Rendered element:</h4>
+          <h1 class="styleguide">Heading 1</h1>
+          <h2 class="heading">Heading 2</h2>
+          <h3 class="heading">Heading 3</h3>
+          <h4 class="heading">Heading 4</h4>
+
+        </section>
+
+        <section class="element">
+          <h3>Paragraphs</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.p-basic</p>
+
+          <h4>Sample code</h4>
+          <code>&lt;p class="p-basic"&gt;This is a paragraph.&lt;/p&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <p class="p-basic">This is a paragraph.</p>
+        </section>
+
+        <section class="element">
+          <h3>Numbered Lists</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.num-list</p>
+
+          <h4>Sample code</h4>
+          <code>&lt;ol class="num-list"&gt;<br>
+            &lt;li&gt;first&lt;/li&gt;<br>
+            &lt;li&gt;second&lt;/li&gt;<br>
+            &lt;/ol&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <ol class="num-list">
+            <li>First</li>
+            <li>Second</li>
+          </ol>
+        </section>
+
+      </section>
+      <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+      <!-- COMBINED ELEMENTS SECTION // -->
+      <section id="combined_elements">
+        <h2>Combined Elements</h2>
+
+        <section class="element">
+          <h3>Main Navigation</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.nav</p>
+
+          <h4>Sample code</h4>
+          <code>&lt;ul class="nav"&gt;<br>
+              &lt;a href="#"&gt;Home&lt;/a&gt;<br>
+              &lt;a href="#"&gt;Contact&lt;/a&gt;<br>
+              &lt;/nav&gt;
+          </code>
+
+          <h4>Rendered element:</h4>
+          <nav class="styleguide">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+          </nav>
+        </section>
+
+        <section class="element">
+          <h3>Product/Service Listing</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.productList</p>
+
+          <h4>Sample code</h4>
+          <code>
+            &lt;div class="blockProductList"&gt;<br>
+            &lt;div class="productList"&gt;<br>
+              &lt;a class="image-link" href="#"&gt;<br>
+              &lt;img class="productList" src="img/fifa19_cover.jpg" alt="fifa 19 cover"&gt;<br>
+              &lt;p class="productListText"&gt;FIFA 19&lt;/p&gt;<br>
+              &lt;/a&gt;<br>
+              &lt;/div&gt;
+              &lt;/div&gt;
+          </code>
+
+          <h4>Rendered element:</h4>
+
+          <div class="blockProductList">
+            <div class="productList">
+              <a class="image-link" href="#">
+                <img class="productList" src="img/fifa19_cover.jpg" alt="fifa 19 cover">
+                <p class="productListText">FIFA 19</p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="element">
+          <h3>Payment Form</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.payment</p>
+
+          <h4>Sample code</h4>
+          <code>
+            &lt;form class="payment"&gt;<br>
+            &lt;label for="paymentinput"&gt;Credit Card Number:&lt;/label&gt;<br>
+            &lt;input class="text-input" type="text" id="paymentinput"&gt;<br>
+            &lt;button class="button-reset" id="submitPayment"&gt;Submit&lt;/button&gt;<br>
+            &lt;/form&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <form class="payment">
+            <label for="paymentinput">Credit Card Number: </label> 
+            <input class="text-input" type="text" id="paymentinput">
+            <button class="button-reset" id="submitPayment">Submit</button>
+          </form>
+        </section>
+
+        <section class="element">
+          <h3>Checkout Cart</h3>
+
+          <h4>CSS selector:</h4>
+          <p>.cart</p>
+
+          <h4>Sample code</h4>
+          <code>
+            &lt;ol class="cart"&gt;<br>
+            &lt;li&gt;Game One: $100&lt;/li&gt;<br>
+            &lt;li&gt;Game Two: $80&lt;/li&gt;<br>
+            &lt;/ol&gt;<br>
+            &lt;p&gt;Total: $180&lt;/p&gt;</code>
+
+          <h4>Rendered element:</h4>
+          <ol class="cart">
+            <li>Game One: $100</li>
+            <li>Game Two: $80</li>
+          </ol>
+          <p>Total: $180</p>
+        </section>
+
+      </section>
+      <!-- // COMBINED ELEMENTS SECTION -->
+
+
+      <!-- COMBINED ELEMENTS SECTION // -->
+      <section class="element">
+      <h3 id="company">Company</h3>
+      <ul>
+        <li>GameNow is a small digital video game company, dedicated to bringing a variety of games to everyone in a very easy way. We believe that game streaming is the future, and we are here to lead the charge.</li>
+        <li>Anyone with access to a web browser and control method would be able to play any game that we offer.</li>
+        <li>Streamed games don't require any expensive devices to run, thus lowering the barrier of entry. Also, there is no other company that specializes in streamed games across multiple platforms. The only existing services that offer this are platform exclusive, like Playstation Now, and other PC services like Steam. These services do not offer streamed games through the internet, only locally over your wifi network.
+        </li>
+      </ul>
+      </section>
+      <section class="element">
+      <h3 id="brand">Branding</h3>
+      <ul>
+        <li>Fonts: Verdana, Geneva, sans-serif and "Lucida Sans Unicode", "Lucida Grande", sans-serif</li>
+        <li>Colors: 
+          <div style="color:rgb(112, 0, 204)"> Purple rgb(112, 0, 204)</div>
+          <div style="color:rgb(2, 164, 252);"> Blue rgb(2, 164, 252);</div> 
+          <div style="color:black"> Black rgb(0, 0, 0)</div>
+          <div style> White rgb(255, 255, 255)</div>
+        </li>
+        <li>Art Direction: Flat iconography. White background with black text, purple headings and blue interactions. Animated transitions to show changes of state.</li>
+      </ul>
+
+      </section>
+
+
+      <section id="citations">
+          <h2>Citations</h2>
+    
+          <ul>
+            <li>Game covers are from <a class="intext-link" href="https://www.twitch.tv/directory">Twitch</a></li>
+            <li>God of War Banner: <a class="intext-link" href="http://www.lordgames.com.br/">LordGames</a></li>
+            <li>Nav Background: <a class="intext-link" href="https://static.giantbomb.com/uploads/original/1/10333/2443942-original+%284%29.jpg">GiantBomb</a></li>
+            <li>Menu icon: <a class="intext-link" href="https://www.strengthandmovementlab.com.au/hosted/images/95/44aaf02deb11e89dec31acafba6dd6/HamburgerButton.png">Hamburger Icon</a></li>
+            
+          </ul>
+    
+        </section>
+    
+    </div>
+  </body>
+</html>

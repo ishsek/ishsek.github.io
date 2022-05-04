@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ishpreet Sekhon Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="main">
+            <a href="portfolio.html">Home</a>
+            <div class="navRight">
+                <!-- <a href="contact.html">Contact</a> -->
+                <a href="pdf/Resume.pdf">Resum&eacute;</a>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <img class="banner" src="img/gamenowThumbNew.png" alt="zero robot box art">
+    </div>
+    <main>
+        <h1 class="project">GameNow</h1>
+        <h2>Background</h2>
+        <section>
+            <h3>Website Description</h3>
+            <p class="bodyText">
+                GameNow is a website made by a group of two students for a third year university course on web design over the duration of 3 weeks. The website was desiged to be an e-commerce, digital game distribution website with a clean look. The design went through several interations, reflected in prototypes, to improve the user experience.
+            </p>
+            <div class="roles">
+                <p class="bodyText"><strong>Type:</strong> Web Design and Development</p>
+                <p class="bodyText"><strong>Tools:</strong> HTML, CSS, Axure, Git, Visual Studio Code</p>
+                <p class="bodyText"><strong>Goal:</strong> Design an e-commerce website on a product of your choice</p>
+            </div>
+        </section>
+
+        <h2>The Process</h2>
+
+        <section>
+            <h3>Styleguide</h3>
+            <p class="bodyText"> 
+                To design the website we first ideated on the theme of the website. I came up with branding for our fake company GameNow which included mission statement, goals, colors, fonts and art direction. This led into a styleguide for the website that provides example codes, classes, and styling for everything from navigation links to content display. 
+            </p>
+            <figure>
+                <iframe class="wireframe" src="websiteExamples/gameNow/styleGuide.html"></iframe>
+                <!--<img src="img/gamenowWireframe.png" alt="game now wireframe">-->
+                <figcaption>Initial styleguide to support expandability of website</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h3>Wireframe</h3>
+            <p class="bodyText">
+                I created the low fidelity wireframe on axure and then took it into draw.io to support collaboration between the group. We then worked on layout design for half of the pages each, following the styleguide, and then came together to discuss each others layouts and adjust it based on feedback.
+            </p>
+            <figure>
+                <iframe class="wireframe" src="websiteExamples/gameNow/Wireframes.html"></iframe>
+                <figcaption>Low fidelity wireframe of website</figcaption>
+            </figure>
+        </section>
+        <section>
+            <h3>Git Repository</h3>
+            <p class="bodyText">
+                I setup a Git repository on GitLab to support the website's version management control. The repo was accessed through GitKraken linked with visual studio code to allow version control directly within visual studio. Changes were pushed regularly with our agreed apon naming convention. This was one of the more challenging aspects of this project as the interlinking of the repo, GitKraken and Visual Studio wasn't always perfect. Sometimes one would fall out of sync with the others and required the program to be manually relaunched.
+            </p>
+            <figure>
+                <img src="img/gameNowGitRepo.png" alt="game now git repository view">
+                <figcaption>Git repository being accessed through GitKraken</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Prototype</h3>
+            <p class="bodyText">
+                <a class="inText" href="websiteExamples/gameNow/index.html" target="_blank">Link to prototype</a>
+            </p>
+            <p class="bodyText">
+                I wrote most of the code for the HTML and CSS prototype. I created a template page first, with the elements that would be consistent throughout each page like the naviation and footer. My team then split up the pages for each of us to complete and I was in charge of the home, games, about, game details, help and account pages. To create these pages to be dynamic I used a grid system with media queries and the flexbox list managment system.
+            </p>
+            <figure>
+                <iframe class="wireframe" src="websiteExamples/gameNow/index.html"></iframe>
+                <figcaption>Prototype website with all pages implemented</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Accessibility Testing</h3>
+            <p class="bodyText">
+                The website was then tested and optomized for accessibility. I used the <a class="inText" href="https://validator.w3.org/" target="_blank">W3Schools html and css validator</a> as an initial test for each page and then a validator service provided by our instructor that used a AAA strict validation schema. Then the speed of access was tested using <a class="inText" href="https://www.webpagetest.org/" target="_blank">webpagetest.org</a> to see if the website is accessible on low bandwidth or datacapped connections. Unfortunately I was unable to get to the optomization of this before the deadline, but I would have added multiple resolution versions of the images in the project and used the srcset property of the img tag to allow the browser to choose the appropriate file. Images were the largest contributors to slower access speeds. 
+            </p>
+            <figure>
+                <img src="img/gameNowValidationTest.png" alt="Validation test of website code">
+                <figcaption>W3Schools validation test</figcaption>
+            </figure>
+            <figure>
+                <img src="img/gameNowAccessSpeed.png" alt="Access speed test">
+                <figcaption>Speed test on webpagetest.org</figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <h3>Reflection</h3>
+            <p class="bodyText">This project made me more aware of the work that goes into making dynamic webpages to be functinoal on a wide variety of devices. I came into this project knowing media queries as a tool for dynamic webpages, but when the number of items I was trying to display became too cumbersome I had to learn new tools like flexbox. Figuring out Git was very rewarding for this project since version management and redundancy with a repository are extremely valuable tools in software development.
+            </p>
+        </section>
+        
+        <section>
+            <p class="floatLeft bodyText"><a class="inText" href="mend.html">Previous Project</a></p>
+            <p class="floatRight bodyText"><a class="inText" href="sko.html">Next project</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p class="contact">&copy Created by Ishpreet Sekhon</p>
+        <p class="contact"><a class="inText" href="mailto:issekhon.117@gmail.com">issekhon.117@gmail.com</a></p>
+    </footer>
+</body>
+</html>
