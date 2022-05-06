@@ -33,6 +33,11 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/SMyjgXsZAIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
+        <h2>Links</h2>
+        <p class="bodyText"><a href="https://github.com/ishsek/wasteofspace">A Waste of Space GitHub Repository</a> for code scripts only.</p>
+        <p class="bodyText"><a href="https://sites.google.com/view/iat445team1-4/home?authuser=0">Website</a>.</p>
+        <p class="bodyText"><a href="https://sites.google.com/view/iat445team1-4/design-doc?authuser=0">Design Doc</a>.</p>
+
         <h2>Background</h2>
         <section>
             <h3>Game Description</h3>
@@ -67,8 +72,10 @@
                 Our team had some difficulty deciding on a topic as we had two large social issues the team was split on, pollution and discrimination. Since we could not come to an agreement we decided to look at the pros and cons of the two larger topics, as well as diving deeper into what each one could involve. We did this through affinity mapping, grouping similar concepts together on sticky notes. Through this process we were able to visually see that there would be a lot of challenges to doing a discrimination focused project. We also were able to narrow down our pollution idea to space pollution, and all our minds started racing about how we could tackle that topic from narrative to assets. We decided as a team to go with space pollution and began working on some detailed concepts.
             </p>
 
+            <h3>Prototyping</h3>
+
             <p class="bodyText">
-              With our idea in hand we began working on both a prototype and a design doc. The design doc can be found <a href="https://sites.google.com/view/iat445team1-4/design-doc?authuser=0">here</a>. I worked on fleshing out some of the ideas in the document but my main work was on the prototype. We did an early prototype in order to test some of the features we knew would be a challenge.
+              With our idea in hand we began working on both a prototype and a design doc. I worked on fleshing out some of the ideas in the document but my main work was on the prototype. We did an early prototype in order to test some of the features we knew would be a challenge.
             </p>
 
             <div class="iframe-container">
@@ -76,8 +83,29 @@
             </div>
 
             <p class="bodyText">
-              
+              At this stage I was prototyping movement and magnetism. For movement I wrote a script that applied a force to Unity's character controller. This was to simulate how a real jetpack would move someone however through testing it was clear that in VR motion without input can trigger motion sickness. It was also difficult to control. To solve for this I removed the force and applied a direct movement vector. Now it was feeling too robotic. Through more testing I ended up writing <a href="https://github.com/ishsek/wasteofspace/blob/main/PlayerController.cs">this script</a> that harshly reduces the speed constantly so that it feels like the player is quickly deccelerating when not pressing any movement input. This ended up working really well, and even though I myself get motion sickness from VR I was able to use this control scheme without issue.
             </p>
+
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4E4f3HAU1aw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <p class="bodyText">
+              For magnetism the goal was to be able to pull debris objects in the air, attach them to the magnet and then eject them in the direction it is facing. To set this up I realized we would need four scripts. The main <a href="https://github.com/ishsek/wasteofspace/blob/main/MagnetController.cs">magnet controller script</a> would handle the inputs of the magnet gun, like pulling, attaching and ejecting. The <a href="https://github.com/ishsek/wasteofspace/blob/main/MagnetCollisionController.cs">magnet collision controller</a> and the <a href="https://github.com/ishsek/wasteofspace/blob/main/MagnetAttachPointController.cs">magnet attach point controller</a> would determine which object is being pulled and if it was close enough to attach to the magnet. Finally, the <a href="https://github.com/ishsek/wasteofspace/blob/main/DebrisObjectScript.cs">debris object controller</a> would hold the data for debris objects. This was really easy for players to understand and manipulate while being generic enough to apply to any debris object so we moved forward with this prototype.
+            </p>
+
+            <h3>Implementation</h3>
+
+            <p class="bodyText">
+              Once the core tools were functional we had one more major problem to address in the final implementation. This was a heavily narrative driven game, so we needed a system to create, trigger, and progress a number of narrative beats. From talking with the team and analyzing our <a href="https://docs.google.com/spreadsheets/d/1qOshxCtg4gmQTA9ULtaM4ZgVuvw21aesxkjfuH2z-r0/edit">storyboard</a>
+            </p>
+
+            <iframe src="https://drive.google.com/file/d/12MyJgWo5Yni_BWWZrVFevbe3y-FNd6Db/view?usp=sharing" width="100%" height="500px">
+            </iframe>
+
+            <div class="iframe-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/SMyjgXsZAIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
 
             <figure>
                 <img src="img/planetarycontrol/planetarycontrol_ideaschosen.png" alt="ideas for game">
@@ -212,7 +240,7 @@
 
         <section>
             <p class="floatLeft bodyText"><a class="inText" href="index.html">Return to main page</a></p>
-            <p class="floatRight bodyText"><a class="inText" href="project2.html">Next project</a></p>
+            <p class="floatRight bodyText"><a class="inText" href="planetarycontrol.html">Next project</a></p>
         </section>
     </main>
 
