@@ -25,13 +25,16 @@
         <h1 class="project">ZERO</h1>
         <iframe frameborder="0" src="https://itch.io/embed/447000?border_width=5&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=4C52A3&amp;border_color=363636" width="100%" height="175"></iframe>
 
+        <h2>Links</h2>
+        <p><a href="https://github.com/ishsek/zero">Source Code</a></p>
+
         <h2>Background</h2>
         <section>
             <h3>Game Description</h3>
             <p class="bodyText">
-                ZER0 is a game made by a group of four students for a third year university course on game design over the duration of 4 weeks. This was our 
-                second time using Unity in its 2D mode to create a short and complete game, focusing on a branching narrative 
-                experience. The game follows a robot named ZER0 after he suddenly reboots in a thunderstorm and must uncover 
+                ZER0 is a game made by a group of four students for a third year university course on game design over the duration of 4 weeks. This was our
+                second time using Unity in its 2D mode to create a short and complete game, focusing on a branching narrative
+                experience. The game follows a robot named ZER0 after he suddenly reboots in a thunderstorm and must uncover
                 what happened.
             </p>
             <div class="roles">
@@ -45,8 +48,8 @@
 
         <section>
             <h3>Narrative Design</h3>
-            <p class="bodyText"> 
-                The initial idea for the game was to create an industrial art styled puzzle platforming game. The narrative would have a few cutscenes in key moments, with backstory told throughout the environment using diagetic 
+            <p class="bodyText">
+                The initial idea for the game was to create an industrial art styled puzzle platforming game. The narrative would have a few cutscenes in key moments, with backstory told throughout the environment using diagetic
                 computer interfaces.
             </p>
             <figure>
@@ -55,8 +58,8 @@
             </figure>
             <p class="bodyText">
                 I designed this initial narrative structure to create a foldback through gameplay, where the player's gameplay choices (which path in the level they take)
-                would affect the end story. The problem we encountered with this structure was that it only gave the 
-                illusion of choice as the player's actions early on didn't have an impact towards the end of the game, only the most 
+                would affect the end story. The problem we encountered with this structure was that it only gave the
+                illusion of choice as the player's actions early on didn't have an impact towards the end of the game, only the most
                 recent choice they made.
             </p>
             <figure>
@@ -64,17 +67,17 @@
                 <figcaption>New plot structure using delayed foldback</figcaption>
             </figure>
             <p class="bodyText">
-                After creating a prototype in Unity I realized that I could prototype the levels rapidly by blocking them out using generic textures (also known as grayboxing), making the level implementation process a lot faster. This meant we could use a more expensive narrative structure without 
-                foldbacks, and that the other team members could work on assets at the same time as the level was being implemented. The new structure branches twice, with several levels never being seen if the player didn't take that direction. 
-                While normally that would seem like a waste of resources, it gave the game a replayability that it was initially 
+                After creating a prototype in Unity I realized that I could prototype the levels rapidly by blocking them out using generic textures (also known as grayboxing), making the level implementation process a lot faster. This meant we could use a more expensive narrative structure without
+                foldbacks, and that the other team members could work on assets at the same time as the level was being implemented. The new structure branches twice, with several levels never being seen if the player didn't take that direction.
+                While normally that would seem like a waste of resources, it gave the game a replayability that it was initially
                 lacking and created that agency that we wanted for the player.
             </p>
         </section>
 
         <section>
             <h3>Programming</h3>
-            <p class="bodyText">As the sole programmer for the project I was in charge of the Unity editing, C# script coding and 
-                level implementation. The first step of this was the player character's physics. I used Unity's built in 
+            <p class="bodyText">As the sole programmer for the project I was in charge of the Unity editing, C# script coding and
+                level implementation. The first step of this was the player character's physics. I used Unity's built in
                 rigidbody structure to create a character with weight. I then created simple block objects to use as floors
                 and then added checks in the script and 2D colliders on the player to allow it to stay on platforms.
             </p>
@@ -88,9 +91,9 @@
             </figure>
             <p class="bodyText">
                 After creating the character, I had to create the implementation for the levels. To do this I created prefabs of various
-                kinds of platforms placed throughout the levels in accordance with sketches from our team's level designer. 
-                Throughout this process, however, the scale of the actual implementation with the jumping physics for the player 
-                made it clear that the levels could not be completed. I fine tuned the player attribute values and positioning of 
+                kinds of platforms placed throughout the levels in accordance with sketches from our team's level designer.
+                Throughout this process, however, the scale of the actual implementation with the jumping physics for the player
+                made it clear that the levels could not be completed. I fine tuned the player attribute values and positioning of
                 the platforms to make it functional.
             </p>
             <figure>
@@ -101,11 +104,11 @@
         <section>
             <h3>Reflection</h3>
             <p class="bodyText">After completing this project I gained a greater appreciation for the cost and time required
-                in game development. The challenge of the prototyping, and learning how to block out levels, made it possible to develop the levels without needing the team to be finished their assets first. This meant that I could work on the implementation while the assets for the levels were still being worked on. 
+                in game development. The challenge of the prototyping, and learning how to block out levels, made it possible to develop the levels without needing the team to be finished their assets first. This meant that I could work on the implementation while the assets for the levels were still being worked on.
             </p>
             <p class="bodyText"><a class="inText" href="pdf/zeroReport.pdf" target="_blank">Zero Final Report</a> is our team's documentation of the process.</p>
         </section>
-        
+
         <section>
             <p class="floatLeft bodyText"><a class="inText" href="portfolio.html">Return to main page</a></p>
             <p class="floatRight bodyText"><a class="inText" href="project2.html">Next project</a></p>

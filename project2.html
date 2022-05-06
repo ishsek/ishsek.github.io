@@ -25,13 +25,17 @@
     <main>
         <h1 class="project">Ant Commander</h1>
         <iframe frameborder="0" src="https://itch.io/embed/447018?border_width=5&amp;bg_color=222222&amp;fg_color=eeeeee&amp;link_color=4C52A3&amp;border_color=363636" width="100%" height="175"></iframe>
+
+        <h2>Links</h2>
+        <p><a href="https://github.com/ishsek/antcommander">Source Code</a></p>
+
         <h2>Background</h2>
         <section>
             <h3>Game Description</h3>
             <p class="bodyText">
                 Ant Commander is a prototype game made for a third year university course by four students over the duration of two weeks. The project is a reimagining of a 2D paltforming game called <a class="inText" href="https://www.youtube.com/watch?v=ov0fswkheBw">
-                Antlion</a>. The goal of the project was to redesign it using a mixture of "fun keys" to create a compelling experience for a 
-                particular type of player. 
+                Antlion</a>. The goal of the project was to redesign it using a mixture of "fun keys" to create a compelling experience for a
+                particular type of player.
                 Our team of four students created a challenging bullet hell game with energy managment mechanics from games like DarkSouls, and focused on
                 boss mechanic theming.
             </p>
@@ -46,10 +50,10 @@
 
         <section>
         <h3>Ideation</h3>
-        <p class="bodyText"> 
+        <p class="bodyText">
             Ant commander's original idea was going to be a boss-rush style game where players go through a series of bosses one
-            after another, aquiring new items along the way to improve their abilities that would feed in to the way they 
-            take down the next one. The game was to be strategic and fast paced. Players would have to choose between firing or movement as 
+            after another, aquiring new items along the way to improve their abilities that would feed in to the way they
+            take down the next one. The game was to be strategic and fast paced. Players would have to choose between firing or movement as
             both would drain their energy.
         </p>
         <figure>
@@ -61,12 +65,12 @@
             <figcaption>Physical rapid prototype to test mechanics</figcaption>
         </figure>
         <p class="bodyText">
-            After creating a rapid physical prototype and playtesting the strategy elements of the game, we noticed the 
+            After creating a rapid physical prototype and playtesting the strategy elements of the game, we noticed the
             strategy element was not really working. The grid style was too restrictive to the player, not giving them enough
-            room or time to strategize. 
+            room or time to strategize.
             Some bosses would teleport when bullets were heading there way, but we didn't put enough limitations on the triggering based on
             how slow players could fire at that point, so the boss would constantly teleport out of the way. Our solution was to expand the scale of
-            the game and make players faster and bosses would have phases where they could not be killed or would teleport 
+            the game and make players faster and bosses would have phases where they could not be killed or would teleport
             a lot more.
         </p>
         <p class="bodyText"><a class="inText" href="pdf/GDD3.pdf" target="_blank">Ant Commander GDD</a> was the second version of our game design doc, after revisions we discussed from playtesting. </p>
@@ -75,7 +79,7 @@
         <section>
         <h3>Programming</h3>
         <p class="bodyText">For this project, I did all of the scripting and implementation within Unity. The challenge here was that this was my first time working with Unity. I was unfamiliar with the editor and the design document that our team created had some complex mechanics in it, like compelx fire effects with their own colliders. To overcome this I did some research on of Unity on my own to learn how to create weapons and projectiles. Doing this i learned about a lot of the editor properties, as well as scripting in C# to allow for the complex results of collisions. This was all done within a week.</p>
-        
+
         <h3>Challenges</h3>
         <p class="bodyText">An example of a problem that I had to overcome was dealing with experimenation in attribute values. Though I had an idea of what values most of the attributes would have going into the digital prototoype (based on the physical prototype playtesting), there is always fine tuning that needs to be done on these values. Things like the player's movement speed, fire speed, energy, rate of fire, etc., need to be adjusted constantly and then tested to get right. </p>
         <p class="bodyText">From my experience with Object Oriented Programming previously, I knew to make variables for each of these values and use those throughout the script, reducing copy pasting and making code dynamic. However, whenever a value needed to be adjusted I had to go into the script it is housed in, change the value, save the script and then test it. This became cumbersome when I started adding multiple scripts to objects.</p>
