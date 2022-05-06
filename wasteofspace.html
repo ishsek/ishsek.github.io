@@ -53,25 +53,27 @@
 
         <h2>The Process</h2>
 
+        <section>
         <p class="bodyText">
             A full breakdown of the process can be found on the game's <a class="inText" href="https://sites.google.com/view/iat445team1-4/design-doc?authuser=0"> blog page</a>. I will be focusing on my work here.
         </p>
 
-        <section>
-            <h3>Concept Design</h3>
-            <p class="bodyText">
+        <h3>Concept Design</h3>
+        <p class="bodyText">
                 At the start of the project we brainstormed the types of topics we would be interested in creating a VR experience on. My personal interest was doing something that involved space movement because it isn't something people can experience easily and it is difficult to do in VR due to motion sickness.
-            </p>
+        </p>
 
-            <figure>
-              <img src="img/wasteofspace/ideation1.png" alt="ideas for game">
-              <figcaption>Initial brainstorming of ideas</figcaption>
-            </figure>
+        <figure>
+          <img src="img/wasteofspace/ideation1.png" alt="ideas for game">
+          <figcaption>Initial brainstorming of ideas</figcaption>
+        </figure>
 
-            <p class="bodyText">
-                Our team had some difficulty deciding on a topic as we had two large social issues the team was split on, pollution and discrimination. Since we could not come to an agreement we decided to look at the pros and cons of the two larger topics, as well as diving deeper into what each one could involve. We did this through affinity mapping, grouping similar concepts together on sticky notes. Through this process we were able to visually see that there would be a lot of challenges to doing a discrimination focused project. We also were able to narrow down our pollution idea to space pollution, and all our minds started racing about how we could tackle that topic from narrative to assets. We decided as a team to go with space pollution and began working on some detailed concepts.
-            </p>
+        <p class="bodyText">
+            Our team had some difficulty deciding on a topic as we had two large social issues the team was split on, pollution and discrimination. Since we could not come to an agreement we decided to look at the pros and cons of the two larger topics, as well as diving deeper into what each one could involve. We did this through affinity mapping, grouping similar concepts together on sticky notes. Through this process we were able to visually see that there would be a lot of challenges to doing a discrimination focused project. We also were able to narrow down our pollution idea to space pollution, and all our minds started racing about how we could tackle that topic from narrative to assets. We decided as a team to go with space pollution and began working on some detailed concepts.
+        </p>
+      </section>
 
+      <section>
             <h3>Prototyping</h3>
 
             <p class="bodyText">
@@ -83,7 +85,7 @@
             </div>
 
             <p class="bodyText">
-              At this stage I was prototyping movement and magnetism. For movement I wrote a script that applied a force to Unity's character controller. This was to simulate how a real jetpack would move someone however through testing it was clear that in VR motion without input can trigger motion sickness. It was also difficult to control. To solve for this I removed the force and applied a direct movement vector. Now it was feeling too robotic. Through more testing I ended up writing <a href="https://github.com/ishsek/wasteofspace/blob/main/PlayerController.cs">this script</a> that harshly reduces the speed constantly so that it feels like the player is quickly deccelerating when not pressing any movement input. This ended up working really well, and even though I myself get motion sickness from VR I was able to use this control scheme without issue.
+              At this stage I was prototyping movement and magnetism. For movement I wrote a script that applied a force to Unity's character controller. This was to simulate how a real jetpack would move someone however through testing it was clear that in VR motion without input can trigger motion sickness. It was also difficult to control. To solve for this I removed the force and applied a direct movement vector. Now it was more usable but feeling too robotic. Through more testing I ended up writing <a href="https://github.com/ishsek/wasteofspace/blob/main/PlayerController.cs">this script</a> that harshly reduces the speed constantly so that it feels like the player is quickly deccelerating when not pressing any movement input. This ended up working really well, and even though I myself get motion sickness from VR I was able to use this control scheme without issue. I also tested using just the player objects forward vector to determine movement direction, but ultimately feedback from playtesting indicated that it didn't feel like we were using a jetpack. The last change we made was to use the exact direction of the camera as the forward while using the player objects up and down vectors for moving up and down. This allowed players to look in the direction they wanted to move, and hit the up and down buttons if they wanted to traverse vertically.
             </p>
 
             <div class="iframe-container">
@@ -93,150 +95,34 @@
             <p class="bodyText">
               For magnetism the goal was to be able to pull debris objects in the air, attach them to the magnet and then eject them in the direction it is facing. To set this up I realized we would need four scripts. The main <a href="https://github.com/ishsek/wasteofspace/blob/main/MagnetController.cs">magnet controller script</a> would handle the inputs of the magnet gun, like pulling, attaching and ejecting. The <a href="https://github.com/ishsek/wasteofspace/blob/main/MagnetCollisionController.cs">magnet collision controller</a> and the <a href="https://github.com/ishsek/wasteofspace/blob/main/MagnetAttachPointController.cs">magnet attach point controller</a> would determine which object is being pulled and if it was close enough to attach to the magnet. Finally, the <a href="https://github.com/ishsek/wasteofspace/blob/main/DebrisObjectScript.cs">debris object controller</a> would hold the data for debris objects. This was really easy for players to understand and manipulate while being generic enough to apply to any debris object so we moved forward with this prototype.
             </p>
+          </section>
 
-            <h3>Implementation</h3>
+          <section>
+            <h3>implementation</h3>
 
             <p class="bodyText">
-              Once the core tools were functional we had one more major problem to address in the final implementation. This was a heavily narrative driven game, so we needed a system to create, trigger, and progress a number of narrative beats. From talking with the team and analyzing our <a href="https://docs.google.com/spreadsheets/d/1qOshxCtg4gmQTA9ULtaM4ZgVuvw21aesxkjfuH2z-r0/edit">storyboard</a>
+              Once the core tools were functional we had one more major problem to address in the final implementation. This was a heavily narrative driven game, so we needed a system to create, trigger, and progress a number of narrative beats. From talking with the team and analyzing our <a href="pdf/wasteofspace/IAT 445_FinalProject_StoryBoard - Sheet1.pdf">storyboard</a> I noticed two main requirements. We would need to handle the transitions and updating for each narrative stage, and hold unique information and references for each narrative step. I split these two requirements up into two scripts, one that handled the <a href="https://github.com/ishsek/wasteofspace/blob/main/NarrativeScriptingController.cs">steps updating and their transitions</a> and another that holds all the <a href="https://github.com/ishsek/wasteofspace/blob/main/DataClasses.cs">data for each step and references needed</a>. The first script would be able to trigger behaviors when transitioning to a new step, and would be able to trigger update behaviors while at a current step. The second script has references to all the information each step would need.
             </p>
 
-            <iframe src="https://drive.google.com/file/d/12MyJgWo5Yni_BWWZrVFevbe3y-FNd6Db/view?usp=sharing" width="100%" height="500px">
+            <iframe src="pdf/wasteofspace/IAT 445_FinalProject_StoryBoard - Sheet1.pdf" width="100%" height="500px">
             </iframe>
 
             <div class="iframe-container">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/SMyjgXsZAIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_ideaschosen.png" alt="ideas for game">
-                <figcaption>Idea rankings</figcaption>
-            </figure>
-
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_sketch.png" alt="sketch of planetary control world">
-                <figcaption>Initial sketch of the game world style</figcaption>
-            </figure>
-
             <p class="bodyText">
-                With our concept finalized we began working on a <a class="inText" href="pdf/planetarycontrol/DesignDoc.pdf" target="_blank">design doc</a> and <a class="inText" href="pdf/planetarycontrol/Presentation.pdf" target="_blank">slide deck</a>. I refined the idea and wrote down details for the high concept, pitch, audience, gameplay structure, player mechanics, aesthetic artifacts, game world, story, design justification, development timeline, test plan, risks and alternatives.
+              This system worked well for our purposes and for the scope that we had. While a more generic system would have been beneficial to making it faster to add narrative steps without code, the problem of unique behaviors would have come up. Some narrative steps need specific information not locally available in that script, or need to trigger custom behaviors at different points in the step, or have other scripts that trigger the next step. On a much larger project we could setup a more generic narrative system that can be triggered a limited number of ways. That could allow designers to setup narrative steps directly in the editor.
             </p>
+          </section>
 
-            <p class="bodyText">
-                For the player mechanics I created a list of the unit types the player could choose from. These 12 archetypes were designed to give each one a unique playstyle and synergies with other units. The Scout, for example, has high visibility range and can move the most units per turn. The Sniper has high attack range but can't move very many units in a turn. The player could synergize by sending the scout to find enemies and attack with the sniper from a safe location. The Paladin has a large shield that can block shots and passively gives a shield to nearby allies. The Medic has low health and damage but provides a passive heal at the end of each turn to nearby allies. Placing the Paladin in front of the Medic keeps the Medic safe while keeping the Paladin's health topped up. Every unit was carefully considered with the roster.
-            </p>
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_mechanics.png" alt="mechanics from first draft">
-                <figcaption>Unit archetypes from first draft of Design Doc</figcaption>
-            </figure>
-
-            <p class="bodyText">
-                I also knew that these mechanics would need to be consistent across the primary and secondary gameplay modes (strategy and third person). The Sniper's attack range is reflected in the damage falloff of their rifle in third person. The Paladin's shield can take a lot of damage if being attacked from the front. The Scout can escape fights by being very fast but they are at risk by being the closest to enemy lines. All the units I designed had this consideration put into them.
-            </p>
-        </section>
-
-        <section>
-            <h3>Iteration</h3>
-            <p class="bodyText">
-                After successfully pitching the idea and receiving some good feedback I began working on refinement. I started with research into existing games in the genre. Two games of note were Fire Emblem and Valkyria Chronicles because they were doing similar hybrid mechanics. I analyzed the two games and used the findings to refine our concept.
-            </p>
-
-            <p class="bodyText">
-                From <i>Fire Emblem: Three Houses</i> I found the game had noticable differences to our idea. The combat is showcased in third person but the player has no control over the unit. The upgrading mechanics of the units was interesting though as it added a layer of decision making that clearly affected the end game of battles. I incoprorated this into our concept by giving each unit upgradable stats that would be reflected in both isometric and third person modes and be consistent with the archetype pros and cons.
-            </p>
-
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_fireemblem.png" alt="Firei emblem example scene">
-                <figcaption>Fire Emblem: Three Houses combat shift to Third Person</figcaption>
-            </figure>
-
-            <p class="bodyText">
-                <i>Valkyria Chronicles 4</i> Was the closest game to ours from the ones I researched. It featured a similar core loop of allowing the player to go into third person and control the unit directly. However, where it differed was in the mechanics. Units can be moved around in third person but to attack they must go stationary and aim a reticle. The opponent is also not attacking back at this time. This reaffirmed mechanics from our game where the player has full control of the unit in battles and the enemy unit fights back. It meant that the emphasis of the turn based strategy was on positioning and planning whereas the emphasis of the third person mode was on hand eye coordination. The player would need to master both to be good at our game.
-            </p>
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_valkyria.jpg" alt="Valkyrai chronicles example">
-                <figcaption>Valkyria Chronicles 4 combat mode</figcaption>
-            </figure>
-        </section>
-
-        <section>
-            <h3>Refinement</h3>
-            <p class="bodyText">
-                Once the idea had been iterated on it was time to update and document the mechanics. In a <a class="inText" href="pdf/planetarycontrol/leveldesign.pdf" target="_blank">second design doc</a> I documented the core loop, smart depth variations and functional flowboard with diagrams. Of note was the smart depth variations which included new mechanics like contextual map boosts and squad sizes. These would give players more choice over where to move their units and avoid creating a dominant strategy of rushing the other player. I also documented the lore backstory of each unit to give them more personality, which was inspired by the success of games like Overwatch.
-            </p>
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_smartdepth.png" alt="Smarth depth diagram">
-                <figcaption>Smart Depth Variation in game mechanics</figcaption>
-            </figure>
-
-            <p class="bodyText">
-                I also began the <a class="inText" href="pdf/planetarycontrol/revisedleveldesign.pdf" target="_blank">level design doc</a> to give our artists some direction and document intial testing of the prototype. The main points in the design of the level are the map boosts, cover structure and pathways. The level is designed using a spider-web layout to fit our sandbox-style gameplay. At any point the player has several options of where to move to and each has its own pros and cons. The center of the map has a lot of cover but is also exposed to the tall buildings. The bridges can be used to access the side buildings on either side but they are the longest route to the enemy base and have little cover. This setup works to achieve our desired pacing where the early game has the least amount of options so players can plan ahead and the late game has players fighting in the middle of the map with a lot more third person action happening.
-            </p>
-
-
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_leveldesign.png" alt="Rough concept of level design">
-                <figcaption>Greybox model of level concept</figcaption>
-            </figure>
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_levellayout.png" alt="Level layout">
-                <figcaption>Spider-web layout of level</figcaption>
-            </figure>
-            <figure>
-                <img src="img/planetarycontrol/planetarycontrol_pacing.png" alt="Pacing diagram">
-                <figcaption>Pacing diagram of level flow</figcaption>
-            </figure>
-
-            <p class="bodyText">
-                I also documented the reward structure in this <a class="inText" href="pdf/planetarycontrol/revisedleveldesign.pdf" target="_blank">design doc</a>. The level uses three reward schedules. The first is a static per-interval reward of Currency on every turn. Later this will allow players to buy things like upgrades with that currency. The second is static per-action where capturing certain control points will give a static amount of rewards. The reward types include weapon damage boost, unit
-                health boost, strafe speed boost, run speed boost, jump height boost, and energy boost. Later on, the player will also be able to buy these with the currency they are earning per round. The final is variable per-action. Some control point rewards are randomized from the possible reward types so that they don't become the dominant strategy.
-            </p>
-        </section>
-
-        <section>
-            <h3>Playtesting</h3>
-            <p class="bodyText">
-                I worked on the playtesting as well, running some sessions and creating the design questions/questionnaire in our design docs. Design areas I specifically wanted to look at were the transition between isometric to third person, strategic thinking, AI difficulty and unit movement. Of these we found some issues in the transition from iso to third person that we smoothed out and some unit movement QoL additions so that their behaviour is clearer. One thing that learned from the playtests was that players were trying to explore the map even though we didn't have any secrets. This gave me the idea to add some minor paths that advanced players could learn, which ended up being jump paths between buildings.
-            </p>
-            <p>
-                 <a class="inText" href="pdf/planetarycontrol/firsttest.pdf" target="_blank">First Playtesting Session</a>
-            </p>
-            <p>
-                <a class="inText" href="pdf/planetarycontrol/firsttestreport.pdf" target="_blank">First Playtesting Session Report</a>
-            </p>
-            <p>
-                <a class="inText" href="pdf/planetarycontrol/secondtest.pdf" target="_blank">Second Playtesting Session</a>
-            </p>
-            <p>
-                <a class="inText" href="pdf/planetarycontrol/secondtestreport.pdf" target="_blank">Second Playtesting Report</a>
-            </p>
-            <p>
-                <a class="inText" href="pdf/planetarycontrol/thirdtest.pdf" target="_blank">Third Playtesting Session</a>
-            </p>
-            <p>
-                <a class="inText" href="pdf/planetarycontrol/thirdtestreport.pdf" target="_blank">Third Playtesting Report</a>
-            </p>
-        </section>
-
-        <section>
-            <h3>Implementation</h3>
-            <p class="bodyText">
-                Since I was the primary programmer on the team, I also handled most of the programming. This is covered extensively on the <a class="inText" href="https://teamsaberishpreet.home.blog/blog-feed/page/1/">game's blog page</a> so I will just talk about about the challenges here.
-            </p>
-
-            <p class="bodyText">
-                The ambition of this project meant that I was constantly exploring ways to achieve our design goals. For the multiplayer I landed on Unet despite it being in the process of deprication because it had the most documentation at the time. It served our purposes in the end. I also changed the combat to be more fluid rather than grid based and used Unity's NavMesh tool to achieve that. It was one of the most successful parts of the final build. Third person shooting was a new control scheme for me and there were some challenges getting the third person mode to communicate with the NavMesh colliders. We had to put some of the features in cold storage due to the time constraints but we managed to deliver a fun core loop in the end.
-            </p>
-        </section>
-
-        <section>
+          <section>
             <h3>Reflection</h3>
+
             <p class="bodyText">
-                My main takeaway from this project was that making games is hard. Harder than I expected despite having a few games completed. It became a running joke amongst our team that we would say "that shouldn't be too hard" to any new feature idea early on but as we started the implementation the difficulty became clear. Despite the difficulty we were rewarded with a technical achievement award from our industry judges for being the only team daring enough to make an online multiplayer game and somewhat succeed.
+              Overall, the project was successful at communicating our intent and players being able to get through the entire experience without issue. During our final showcase we got a lot of positive feedback about the experience. People understood the message we were trying to send about space pollution and they really enjoyed being able to move around in space. None of our players got motion sickness and most were able to get through the experience without needing help or guidance. Some improvements could have been made given more time, like adding a musical score or more story impact towards the latter end of the experience.
             </p>
-            <p class="bodyText">
-                The project gave me a lot of tools to use as a game designer and a lot of methods for avoiding pitfalls as a programmer. Even though we may not have succeeded at our original idea, we all learned a lot from trying and the project gave me more confidence as a programmer and designer.
-            </p>
-        </section>
+          </section>
 
         <section>
             <p class="floatLeft bodyText"><a class="inText" href="index.html">Return to main page</a></p>
