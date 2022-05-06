@@ -270,13 +270,13 @@ p.floatRight {
 
 /* Figure styling */
 figure {
-    margin: 3rem 0; 
+    margin: 3rem 0;
 }
 
 figcaption {
     margin-top: 1rem;
     text-align: center;
-    font-style: italic; 
+    font-style: italic;
 }
 
 figure.project {
@@ -308,7 +308,7 @@ div.container img {
     display: block;
     transition: .5s ease;
     backface-visibility: hidden;
-    
+
 }
 
 div.container:hover div.zero, div.container:focus div.zero {
@@ -321,7 +321,7 @@ div.container:hover div.zero, div.container:focus div.zero {
 div.container:hover img, div.container:focus img {
     /* opacity: 0.3; */
 }
-  
+
 div.container:hover div.middle, div.container:focus div.middle {
     /* padding: 1rem; */
     opacity: 1;
@@ -381,7 +381,11 @@ div.mend {
 }
 
 div.planetarycontrol {
-    background-color: rgba(10, 70, 121, 0.3)
+    background-color: rgba(141, 84, 27, 0.3)
+}
+
+div.wasteofspace {
+  background-color: rgba(0, 0, 80, 0.5);
 }
 
 p.overlay {
@@ -424,7 +428,7 @@ ul.roles li {
     #thumb1 {
         padding-right: 0;
     }
-    
+
     #thumb2 {
         padding-left: 0;
     }
@@ -501,7 +505,7 @@ iframe.wireframe {
 .iframe-container{
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; 
+    padding-bottom: 56.25%;
     height: 0;
     margin: 30px 0px 30px 0px;
   }
