@@ -13,6 +13,7 @@
         <nav class="main">
             <a href="index.html">Home</a>
             <div class="navRight">
+              <a href="work.html">Work</a>
                 <!-- <a href="contact.html">Contact</a> -->
                 <a href="pdf/Resume.pdf">Resum&eacute;</a>
             </div>
@@ -27,7 +28,7 @@
         <section>
             <h3>Website Description</h3>
             <p class="bodyText">
-                sko is a website made by a group of two students for a third year university course on backend web development over the duration of 3 weeks. The website is programmed in HTML, CSS, JavaScript and PHP with an SQL relational database. 
+                sko is a website made by a group of two students for a third year university course on backend web development over the duration of 3 weeks. The website is programmed in HTML, CSS, JavaScript and PHP with an SQL relational database.
             </p>
             <div class="roles">
                 <p class="bodyText"><strong>Type:</strong> Web Design and Development</p>
@@ -40,7 +41,7 @@
 
         <section>
             <h3>ER Diagram</h3>
-            <p class="bodyText"> 
+            <p class="bodyText">
                 For the first step of this project I created an entity relationship diagram to model how the database would work. The model is used as a reference for the code that creates the database and was made using draw.io.
             </p>
             <figure>
@@ -107,7 +108,7 @@
         <section>
             <h3>JavaScript</h3>
             <p class="bodyText">
-                The website uses AJAX techniques with JavaScript and jQuery to dynamically load more reviews when a user clicks "load more". JavaScript is also used for the banner on the home page to rotate out the image. 
+                The website uses AJAX techniques with JavaScript and jQuery to dynamically load more reviews when a user clicks "load more". JavaScript is also used for the banner on the home page to rotate out the image.
             </p>
             <figure>
                 <img src="img/skoAJAX.png" alt="AJAX demo">
@@ -140,7 +141,7 @@
             <p class="bodyText">This project was very enlightening for backend web development. I learned many new tools that are very useful for creating dynamic webpages. AJAX and jQuery are two that I continue to use regularly, as they are very good for requesting and interpreting JSON data from web API's. PHP is also an amazing asset to any web developer, and I use it whenever I'm dealing with forms or I want to create a partial HTML document that gets reused often like headers and footers.
             </p>
         </section>
-        
+
         <section>
             <p class="floatLeft bodyText"><a class="inText" href="gamenow.html">Previous Project</a></p>
             <p class="floatRight bodyText"><a class="inText" href="portfolio.html">Return to Home</a></p>
@@ -162,12 +163,12 @@
         function showDivs(n) {
         var i;
         var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1} 
+        if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length} ;
         for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none"; 
+            x[i].style.display = "none";
         }
-        x[slideIndex-1].style.display = "block"; 
+        x[slideIndex-1].style.display = "block";
         }
     </script>
 </body>
